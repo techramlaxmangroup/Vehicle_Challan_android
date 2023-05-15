@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:app1="http://schemas.android.com/apk/res-auto"
+    xmlns:app2="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="logData"
+            type="com.technosales.vehiclechallanmobile.model.logresponse.LogData" />
+
+
+        <variable
+            name="clickHandler"
+            type="com.technosales.vehiclechallanmobile.ui.MainActivity.MainActivityCLickHandler" />
+
+
+
+    </data>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_to_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:context=".ui.ReportActivity">
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingStart="@dimen/margin_padding_size_small"
+                        android:paddingEnd="@dimen/margin_padding_size_small">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_item_type"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="start"
+                            android:onClick="@{clickHandler::onItemTypeClicked}"
+                            android:padding="@dimen/margin_padding_size_medium"
+                            android:text="Type : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_size_large"
+                            app:cornerRadius="@dimen/margin_padding_size_medium"
+                            app:strokeColor="@color/colorPrimary"
+                            app:strokeWidth="2dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_date_from"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/margin_padding_size_medium"
+                            android:gravity="start"
+                            android:onClick="@{clickHandler::onDateFromClicked}"
+                            android:padding="@dimen/margin_padding_size_medium"
+                            android:text="From : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_size_large"
+                            app1:cornerRadius="@dimen/margin_padding_size_medium"
+                            app:strokeColor="@color/colorPrimary"
+                            app:strokeWidth="2dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_date_to"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/margin_padding_size_medium"
+                            android:gravity="start"
+                            android:onClick="@{clickHandler::onDateToClicked}"
+                            android:padding="@dimen/margin_padding_size_medium"
+                            android:text="To : "
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="@dimen/text_size_large"
+                            app2:cornerRadius="@dimen/margin_padding_size_medium"
+                            app:strokeColor="@color/colorPrimary"
+                            app:strokeWidth="2dp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_filter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/margin_padding_size_medium"
+                            android:onClick="@{clickHandler::onFilterClicked}"
+                            android:text="Filter"
+                            android:textAllCaps="false"
+                            android:textSize="@dimen/text_size_large"
+                            app2:cornerRadius="@dimen/text_size_medium"
+                            app:strokeColor="@color/colorPrimary"
+                            app:strokeWidth="2dp" />
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/ll_label"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorPrimary"
+                            android:orientation="horizontal"
+                            android:paddingTop="@dimen/margin_padding_size_medium"
+                            android:paddingBottom="@dimen/margin_padding_size_medium">
+
+                            <TextView
+                                android:layout_width="50dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="SN"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/text_size_large" />
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/margin_padding_size_medium"
+                                android:layout_marginEnd="@dimen/margin_padding_size_medium"
+                                android:gravity="center"
+                                android:text="Image"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/text_size_large" />
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="Ticket no\nVehicle no"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/text_size_large" />
+
+                            <TextView
+                                android:layout_width="120dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="Reference type\nNumber"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/text_size_large" />
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="Item type"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/text_size_large" />
+
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="Generate time\nRead time"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/text_size_large" />
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="Read by"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/text_size_large" />
+                        </LinearLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rv_report"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/ll_label"
+                            tools:listitem="@layout/item_report" />
+
+                    </RelativeLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:indeterminateTint="@color/colorPrimary"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</layout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="logData"
+            type="com.technosales.vehiclechallanmobile.model.logresponse.LogData" />
+
+        <variable
+            name="sn"
+            type="String" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_padding_size_small"
+        android:layout_marginBottom="@dimen/margin_padding_size_small">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/margin_padding_size_small"
+            android:paddingBottom="@dimen/margin_padding_size_small">
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@{sn}"
+                android:textSize="@dimen/text_size_large" />
+
+            <ImageView
+                android:id="@+id/iv_vehicle_image"
+                imageSrc="@{logData.vehicleImage}"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="@dimen/margin_padding_size_medium"
+                android:layout_marginEnd="@dimen/margin_padding_size_medium"
+                android:gravity="center"
+                android:src="@drawable/no_image"
+                android:textSize="@dimen/text_size_large" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@{logData.ticketNumber+`\n`+logData.vehicleNumber}"
+                android:textSize="@dimen/text_size_large" />
+
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@{logData.referenceType +`\n` + logData.referenceNumber}"
+                android:textSize="@dimen/text_size_large" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@{logData.item.itemName}"
+                android:textSize="@dimen/text_size_large" />
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@{logData.generateDeviceTime +`\n` +logData.readDeviceTime}"
+                android:textSize="@dimen/text_size_large" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@{logData.readBy}"
+                android:textSize="@dimen/text_size_large" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

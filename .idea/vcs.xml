@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/BusLocationVideoPlayer" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/CameraDVR2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/FaceRecognizationTerminal" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/HikVision" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/HikVision2/HikVision" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Serial port data capture new with apk/Android-SerialPort-API-master" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/VotingApp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/bus_video_player" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/busfacedetect" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/buslocatoinannouncement" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/letzgov2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/mobitracknew" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/techsales-letzgov2" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/thermobluetooth" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/thermometer" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/vehiclechallan" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/voteandprint" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/votingbyr" vcs="Git" />
+  </component>
+</project>
